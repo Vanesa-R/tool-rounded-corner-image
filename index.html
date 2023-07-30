@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/assets/icomoon-v1.0/style.css">
+    <link rel="stylesheet" href="/css/style.css">
+
+    <title>Document</title>
+</head>
+<body>
+
+    <header class="header">
+
+    </header>
+
+
+    <main class="main">
+
+        <form class="form" id="form" method="post">
+
+            <div class="input-group">
+                <input type="file" name="input-file" id="input-file" class="file">
+                <label for="input-file" class="input-file" accept="image/*">
+                    <span class="icon icon-upload"></span>
+                Subir imagen</label>
+            </div>
+    
+            <div class="drop-zone" id="drop-zone">
+                <div class="drop-zone__image">
+                    <p class="drop-zone__text">Arrastra aquí la imagen</p>
+                </div>
+            </div>
+    
+            <div class="preview__image"></div>
+    
+            <div class="input-group slide">
+                <label for="input-range" class="input-range">Radius (<span class="value-radius">0%</span>)</label>
+                <input type="range" name="input-range" class="range" value="0">
+            </div>
+    
+        </form>
+    
+    
+        <div class="container__download">
+            
+            <div class="download__image"></div>
+            <a class="download">
+                <span class="icon icon-download"></span>
+                Descargar imagen
+            </a>
+            
+        </div>
+    </main>
+
+
+
+
+
+    
+
+    <script src="/js/script.js"></script>
+    
+</body>
+</html>

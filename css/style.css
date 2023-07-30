@@ -1,0 +1,188 @@
+:root {
+    --fontPrimary: 'Raleway', sans-serif;
+    --white: hsl(60, 20%, 99%);
+    --blue: rgb(186, 244, 219);
+    --mint: hsl(155, 71%, 75%);
+    --turquoise: rgb(39, 206, 200);
+}
+
+/* LAYOUT */
+
+body {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    padding: 1em;
+    font-family: var(--fontPrimary);
+    font-size: 12px;
+    background-color: var(--white);
+}
+
+@media (min-width: 1024px) {
+    body {
+        padding: 2em;
+    }
+}
+
+
+@media (min-width: 1024px) {
+    .main {
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+/* Área de imagen de subida e imagen final */
+
+.form,
+.container__download {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    font-size: 1.2em;
+}
+
+@media (min-width: 1024px) {
+    .form,
+    .container__download {
+        width: 50%;
+    }
+}
+
+
+
+/* CTA */
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+
+.file {
+    opacity: 0;
+    overflow: hidden;
+    height: 0;
+}
+
+.file + label,
+.download {
+    background-color: var(--blue);
+    padding:.5em 1em;
+    border-radius: .3em;
+    cursor: pointer;
+}
+
+.download {
+    align-self: flex-end;
+    width: fit-content;
+    margin-top: 1em;
+    border: none;
+    outline: none;
+}
+
+
+.icon {
+    width: 20px;
+    height: 20px;
+    margin-right: .5em;
+}
+
+.icon::before {
+    font-size: 1.2em;
+}
+
+.icon-upload:before {
+    content: "\e901";
+}
+
+
+/* IMÁGENES */
+
+.drop-zone, 
+.preview__image,
+.download__image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30vh;
+    margin: 1em 0;
+    padding: .5em;
+}
+
+
+@media (min-width: 1024px) {
+    .drop-zone, 
+    .preview,
+    .download__image {
+       height: 50vh;
+    }
+}
+
+
+
+/* Arrastrar imagen */ 
+.drop-zone {
+    position: relative;
+    border: 1px dotted lightgrey;
+}
+
+
+/* Previsualización de imagen subida */
+.preview__image {
+    display: none;
+    border: 1px solid lightgrey;
+    height: 50vh;
+}
+
+.img-preview,
+.img-download {
+    display: flex;
+    height: 100%;
+}
+
+.download__image {
+    border: 1px solid var(--turquoise);
+    margin: 3.4em 0 0 1em;
+}
+
+
+
+/* Selección del border radius */
+
+.input-range {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.range {
+    -webkit-appearance: none;
+    appearance: none;
+    outline: none;
+    width: 50%;
+    height: .4em;
+    border: none;
+    border-radius: .3em;
+    background: #ccc;
+    margin-top: .5em;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 1.5em;
+    width: 1.5em;
+    border-radius: 50%;
+    background-color: var(--turquoise);
+    border: none;
+    border: .2em solid var(--white);
+}
+
+.slide label {
+    display: inline;    
+}
+
+
